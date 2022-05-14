@@ -83,15 +83,15 @@ TEST_F(ExponentialTest, contruct_negative)
 
 TEST_F(ExponentialTest, double_cast)
 {
-    EXPECT_EQ(static_cast<double>(zero), 0.0);
-    EXPECT_EQ(static_cast<double>(one), 1.0);
-    EXPECT_EQ(static_cast<double>(negative_one), -1.0);
-    EXPECT_EQ(static_cast<double>(nano), 1e-9);
-    EXPECT_EQ(static_cast<double>(negative_nano), -1e-9);
-    EXPECT_EQ(static_cast<double>(trillion), 1e12);
-    EXPECT_EQ(static_cast<double>(negative_trillion), -1e12);
-    EXPECT_EQ(static_cast<double>(googol), 1e100);
-    EXPECT_EQ(static_cast<double>(negative_googol), -1e100);
+    EXPECT_DOUBLE_EQ(static_cast<double>(zero), 0.0);
+    EXPECT_DOUBLE_EQ(static_cast<double>(one), 1.0);
+    EXPECT_DOUBLE_EQ(static_cast<double>(negative_one), -1.0);
+    EXPECT_DOUBLE_EQ(static_cast<double>(nano), 1e-9);
+    EXPECT_DOUBLE_EQ(static_cast<double>(negative_nano), -1e-9);
+    EXPECT_DOUBLE_EQ(static_cast<double>(trillion), 1e12);
+    EXPECT_DOUBLE_EQ(static_cast<double>(negative_trillion), -1e12);
+    EXPECT_DOUBLE_EQ(static_cast<double>(googol), 1e100);
+    EXPECT_DOUBLE_EQ(static_cast<double>(negative_googol), -1e100);
 }
 
 TEST_F(ExponentialTest, equals)
