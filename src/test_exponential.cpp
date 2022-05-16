@@ -26,7 +26,7 @@ protected:
 
 TEST_F(ExponentialTest, traits)
 {
-    EXPECT_EQ(sizeof(Exponential), sizeof(double) * 2);
+    EXPECT_EQ(sizeof(Exponential), sizeof(std::int64_t) * 2);
     EXPECT_TRUE(std::is_trivially_copyable_v<Exponential>);
 }
 
