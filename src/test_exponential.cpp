@@ -183,7 +183,7 @@ TEST_F(ExponentialTest, subtract)
     EXPECT_EQ(h.exponent(), 101);
 }
 
-TEST_F(ExponentialTest, multiple)
+TEST_F(ExponentialTest, multiply)
 {
     EXPECT_EQ(0 * zero, 0);
     EXPECT_EQ(zero * 0, 0);
