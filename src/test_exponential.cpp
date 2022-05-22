@@ -235,7 +235,9 @@ TEST_F(ExponentialTest, divide)
     EXPECT_EQ(googol / nano, Exponential(1, 109));
     EXPECT_EQ(nano / googol, Exponential(1, -109));
     EXPECT_EQ(nano / (2 * googol), Exponential(5, -110));
-    EXPECT_EQ(one / 3, Exponential(333333333333333333, -18));
+
+    const Exponential one_third = one / 3;
+    EXPECT_TRUE(one_third == Exponential(333333333333333333, -18) || one_third == Exponential(3333333333333333333, -19));
 
     const Exponential googol_square{1, 200};
     EXPECT_EQ(googol_square / googol, googol);
