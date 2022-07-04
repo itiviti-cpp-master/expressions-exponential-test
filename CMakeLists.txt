@@ -14,7 +14,8 @@ project(${PROJECT_NAME})
 include_directories(${ROOT_INCLUDES} ${TEST_INCLUDES})
 
 # Source files
-file(GLOB_RECURSE SRC_FILES FOLLOW_SYMLINKS ${PROJECT_SOURCE_DIR}/**.cpp)
+file(GLOB SRC_FILES ${PROJECT_SOURCE_DIR}/src/*.cpp)
+list(APPEND SRC_FILES ${PROJECT_SOURCE_DIR}/common/src/test_expression.cpp)
 
 # Include the gtest library
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
