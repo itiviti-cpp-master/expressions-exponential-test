@@ -278,7 +278,7 @@ TEST_F(ExponentialTest, string)
 TEST_F(ExponentialTest, print)
 {
     static constexpr auto str = [](const Exponential & n) {
-        std::stringstream ss;
+        std::ostringstream ss;
         ss << n;
         return ss.str();
     };
